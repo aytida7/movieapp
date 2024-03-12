@@ -1,4 +1,4 @@
-{
+export default{
   "expo": {
     "name": "movieapp",
     "slug": "movieapp",
@@ -9,8 +9,11 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
+    "plugins":[
+      "@react-native-google-signin/google-signin"
+    ],
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -20,11 +23,18 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#000000"
+      },
+      "package":"com.aditya.inkle",
+      "googleServicesFile": process.env.GOOGLE_SERVICES_JSON,
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "90007cc5-e0af-4256-9194-710f2c80ac38"
+      }
     }
   }
 }
